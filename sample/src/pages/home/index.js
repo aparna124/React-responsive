@@ -3,18 +3,19 @@ import Illustration from '../../assets/Illustration.png';
 import Frame from '../../assets/FrameTop.png';
 import SquiggleBlue from '../../assets/SquiggleBlue.png';
 import FrameBlue1 from '../../assets/FrameBlue1.png';
-import { Typography, Grid, Box } from '@material-ui/core';
+import { Typography, Grid, Box} from '@mui/material';
 import WorkText from '../../assets/WorkText.png';
 import Step1 from '../../assets/Step 1.png';
 import illustration1 from '../../assets/illustration1.png';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import illustration2 from '../../assets/illustration2.png';
 import illustration3 from '../../assets/illustration3.png';
-
+import { SignUp } from '../signup';
+import JoinOurCommunity from '../../assets/Join Our Comunity.png';
 
 const theme = createTheme();
 
-theme.typography.h3 = {
+theme.typography.h1 = {
     fontSize: '1.2rem',
     '@media (min-width:600px)': {
       fontSize: '1.8rem',
@@ -134,9 +135,32 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
+
+                <div id="SignUp">
+                    <SignUp />
+                </div>
                 
+                <div id="join" style={{height: '100%', paddingTop: '10%'}}>
+                    <div style={{position: 'absolute'}}>
+                        <img src={JoinOurCommunity} style={{ maxWidth: '100%'}} />
+                    </div>
+                    <div style={{position: 'relative', paddingTop: '44%'}}>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant='h1' style={{ fontWeight: '600', lineHeight: '6rem' }}>
+                                <Box>Discord</Box>
+                                <Box>Twitter</Box>
+                                <Box>Instagram</Box>
+                            </Typography>
+                        </ThemeProvider>
+                    </div>
+                    
+                </div>   
             </div>
-        
+            <div id="footer" style={{paddingTop: '10%'}}>
+                <div style={{backgroundColor: '#3366FF', height: '360px', width: '100%'}}>
+
+                </div>                       
+            </div>
        </div> 
     )
 }
