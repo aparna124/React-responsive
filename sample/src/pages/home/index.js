@@ -3,7 +3,7 @@ import Illustration from '../../assets/Illustration.png';
 import Frame from '../../assets/FrameTop.png';
 import SquiggleBlue from '../../assets/SquiggleBlue.png';
 import FrameBlue1 from '../../assets/FrameBlue1.png';
-import { Typography, Grid, Box} from '@mui/material';
+import { Typography, Grid, Box, item} from '@mui/material';
 import WorkText from '../../assets/WorkText.png';
 import Step1 from '../../assets/Step 1.png';
 import illustration1 from '../../assets/illustration1.png';
@@ -12,16 +12,18 @@ import illustration2 from '../../assets/illustration2.png';
 import illustration3 from '../../assets/illustration3.png';
 import { SignUp } from '../signup';
 import JoinOurCommunity from '../../assets/Join Our Comunity.png';
+import cairLogo from '../../assets/cair logo.png';
+import TextField from '@mui/material/TextField';
 
 const theme = createTheme();
 
 theme.typography.h1 = {
-    fontSize: '1.2rem',
+    fontSize: '2rem',
     '@media (min-width:600px)': {
-      fontSize: '1.8rem',
+      fontSize: '2.8rem',
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '2.6rem',
+      fontSize: '5rem',
     },
   };
   
@@ -146,7 +148,7 @@ export const Home = () => {
                     </div>
                     <div style={{position: 'relative', paddingTop: '44%'}}>
                         <ThemeProvider theme={theme}>
-                            <Typography variant='h1' style={{ fontWeight: '600', lineHeight: '6rem' }}>
+                            <Typography variant='h1'>
                                 <Box>Discord</Box>
                                 <Box>Twitter</Box>
                                 <Box>Instagram</Box>
@@ -157,8 +159,41 @@ export const Home = () => {
                 </div>   
             </div>
             <div id="footer" style={{paddingTop: '10%'}}>
-                <div style={{backgroundColor: '#3366FF', height: '360px', width: '100%'}}>
-
+                <div style={{backgroundColor: '#3366FF', height: '360px', width: '100%', padding: '5%'}}>
+                    <Grid container>
+                        <Grid item xs={2}>
+                            <img src={cairLogo} />
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Grid container>
+                                <Grid item xs={4}>
+                                    <Typography>
+                                        <Box>About</Box>
+                                        <Box>Blog</Box>
+                                        <Box>Partners</Box>
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <Typography>
+                                        <Box>Docs</Box>
+                                        <Box>Integrations</Box>
+                                        <Box>API</Box>
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <Typography>
+                                        <Box>Partners</Box>
+                                        <Box>Privacy Policy</Box>
+                                        <Box>Terms</Box>
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Typography>Keep up to date with our Newsletter</Typography>
+                            <TextField id="filled-basic" label="Enter your e-mail" variant="filled" />
+                        </Grid>
+                    </Grid>
                 </div>                       
             </div>
        </div> 
