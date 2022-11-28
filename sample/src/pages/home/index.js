@@ -18,6 +18,7 @@ import styled from '@emotion/styled';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
+import { Footer } from '../../components/footer';
 
 const theme = createTheme();
 
@@ -182,70 +183,7 @@ export const Home = () => {
                 </div>   
             </div>
             <div id="footer" style={{paddingTop: '10%'}}>
-                <div style={{backgroundColor: '#3366FF', height: '100%', width: '100%', padding: '5%'}}>
-                    <Grid container>
-                        <Grid item xs={2}>
-                            <img src={cairLogo} />
-                        </Grid>
-                        <Grid item xs={5} style={{color: '#fff'}}>
-                            <div>
-                                <Grid container>
-                                    <Grid item xs={4}>
-                                        <Typography>
-                                            <Box>About</Box>
-                                            <Box>Blog</Box>
-                                            <Box>Partners</Box>
-                                            <Box>FAQ</Box>
-                                            <Box>Blog</Box>
-                                        </Typography>
-                                    </Grid>
-                                    <Grid item xs={4}>
-                                        <Typography>
-                                            <Box>Docs</Box>
-                                            <Box>Integrations</Box>
-                                            <Box>API</Box>
-                                            <Box>Security</Box>
-                                            <Box>Research</Box>
-                                        </Typography>
-                                    </Grid>
-                                    <Grid item xs={4}>
-                                        <Typography>
-                                            <Box>Partners</Box>
-                                            <Box>Privacy Policy</Box>
-                                            <Box>Terms</Box>
-                                            <Box>Sitemap</Box>
-                                            <Box>Contact</Box>
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
-                            </div>
-                            <div style={{paddingTop: '10%'}}>
-                                <Grid container>
-                                    <Grid item xs={4} style={{color: 'black', }}>
-                                        <Typography style={{fontSize: '12px', fontWeight: "500"}}>CAIR © 2022 All rights reserved</Typography>
-                                    </Grid>
-                                    <Grid item xs={3}>
-                                        <Typography style={{fontSize: '12px', fontWeight: "500"}}>Privacy Policy</Typography>
-                                    </Grid>
-                                    <Grid item xs={3}>
-                                        <Typography style={{fontSize: '12px', fontWeight: "500"}}>Terms of Service</Typography>
-                                    </Grid>
-                                    <Grid item xs={2}>
-                                        <Typography style={{fontSize: '12px', fontWeight: "500"}}>Sitemap</Typography>
-                                    </Grid>
-                                </Grid>
-                            </div>
-                            
-                        </Grid>
-                        <Grid item xs={5}>
-                            <div>
-                                <Typography>Keep up to date with our Newsletter</Typography>
-                                <CssTextField id="filled-basic" label="Enter your e-mail" variant="filled" style={{width: '420px', borderRadius: '50px'}}/>
-                                <Button type="submit" style={{marginLeft: '-170px', marginTop: '1.2%', backgroundColor: '#33FF99', textTransform: 'none', color: 'black', width: '150px', borderRadius: '50px'}}>Subscribe</Button> 
-                            </div>
-                        </Grid>
-                    </Grid>
-                </div>                     
+                <Footer />                    
             </div>
        </div> 
     )
