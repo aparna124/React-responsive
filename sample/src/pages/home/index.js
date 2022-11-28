@@ -14,6 +14,10 @@ import { SignUp } from '../signup';
 import JoinOurCommunity from '../../assets/Join Our Comunity.png';
 import cairLogo from '../../assets/cair logo.png';
 import TextField from '@mui/material/TextField';
+import styled from '@emotion/styled';
+import InputAdornment from '@mui/material/InputAdornment';
+import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 
 const theme = createTheme();
 
@@ -36,6 +40,25 @@ theme.typography.h1 = {
         fontSize: '1.4rem',
       },
     };
+
+  const CssTextField = styled(TextField)({
+        // '& label.Mui-focused': {
+        //     color: 'green',
+        // },
+        // '& .MuiInput-underline:after': {
+        //     borderBottomColor: '#33FF99',
+        // },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                // borderColor: '#33FF99',
+                borderRadius: '25px',
+                // borderBlockWidth: '2px',
+                backgroundColor: '#254FCE',
+                width: '200px',
+                heigt: '60px'
+            },
+        },
+    });
 
 export const Home = () => {
 
@@ -159,42 +182,70 @@ export const Home = () => {
                 </div>   
             </div>
             <div id="footer" style={{paddingTop: '10%'}}>
-                <div style={{backgroundColor: '#3366FF', height: '360px', width: '100%', padding: '5%'}}>
+                <div style={{backgroundColor: '#3366FF', height: '100%', width: '100%', padding: '5%'}}>
                     <Grid container>
                         <Grid item xs={2}>
                             <img src={cairLogo} />
                         </Grid>
-                        <Grid item xs={4}>
-                            <Grid container>
-                                <Grid item xs={4}>
-                                    <Typography>
-                                        <Box>About</Box>
-                                        <Box>Blog</Box>
-                                        <Box>Partners</Box>
-                                    </Typography>
+                        <Grid item xs={5} style={{color: '#fff'}}>
+                            <div>
+                                <Grid container>
+                                    <Grid item xs={4}>
+                                        <Typography>
+                                            <Box>About</Box>
+                                            <Box>Blog</Box>
+                                            <Box>Partners</Box>
+                                            <Box>FAQ</Box>
+                                            <Box>Blog</Box>
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={4}>
+                                        <Typography>
+                                            <Box>Docs</Box>
+                                            <Box>Integrations</Box>
+                                            <Box>API</Box>
+                                            <Box>Security</Box>
+                                            <Box>Research</Box>
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={4}>
+                                        <Typography>
+                                            <Box>Partners</Box>
+                                            <Box>Privacy Policy</Box>
+                                            <Box>Terms</Box>
+                                            <Box>Sitemap</Box>
+                                            <Box>Contact</Box>
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
-                                <Grid item xs={4}>
-                                    <Typography>
-                                        <Box>Docs</Box>
-                                        <Box>Integrations</Box>
-                                        <Box>API</Box>
-                                    </Typography>
+                            </div>
+                            <div style={{paddingTop: '10%'}}>
+                                <Grid container>
+                                    <Grid item xs={4} style={{color: 'black', }}>
+                                        <Typography style={{fontSize: '12px', fontWeight: "500"}}>CAIR © 2022 All rights reserved</Typography>
+                                    </Grid>
+                                    <Grid item xs={3}>
+                                        <Typography style={{fontSize: '12px', fontWeight: "500"}}>Privacy Policy</Typography>
+                                    </Grid>
+                                    <Grid item xs={3}>
+                                        <Typography style={{fontSize: '12px', fontWeight: "500"}}>Terms of Service</Typography>
+                                    </Grid>
+                                    <Grid item xs={2}>
+                                        <Typography style={{fontSize: '12px', fontWeight: "500"}}>Sitemap</Typography>
+                                    </Grid>
                                 </Grid>
-                                <Grid item xs={4}>
-                                    <Typography>
-                                        <Box>Partners</Box>
-                                        <Box>Privacy Policy</Box>
-                                        <Box>Terms</Box>
-                                    </Typography>
-                                </Grid>
-                            </Grid>
+                            </div>
+                            
                         </Grid>
-                        <Grid item xs={6}>
-                            <Typography>Keep up to date with our Newsletter</Typography>
-                            <TextField id="filled-basic" label="Enter your e-mail" variant="filled" />
+                        <Grid item xs={5}>
+                            <div>
+                                <Typography>Keep up to date with our Newsletter</Typography>
+                                <CssTextField id="filled-basic" label="Enter your e-mail" variant="filled" style={{width: '420px', borderRadius: '50px'}}/>
+                                <Button type="submit" style={{marginLeft: '-170px', marginTop: '1.2%', backgroundColor: '#33FF99', textTransform: 'none', color: 'black', width: '150px', borderRadius: '50px'}}>Subscribe</Button> 
+                            </div>
                         </Grid>
                     </Grid>
-                </div>                       
+                </div>                     
             </div>
        </div> 
     )
